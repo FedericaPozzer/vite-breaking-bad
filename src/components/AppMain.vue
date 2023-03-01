@@ -25,7 +25,7 @@ export default {
 
                 <div class="found p-3"> Found 39 cards </div>
 
-                <div class="cards row">
+                <div class="cards row row-cols-6">
 
                     <AppCards></AppCards>
 
