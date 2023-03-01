@@ -1,16 +1,20 @@
 <script>
-import prova from "./components/prova.vue"
+import AppHeader from "./components/AppHeader.vue"
+import AppMain from "./components/AppMain.vue"
+
 
 export default {
   components : {
-    prova
+    AppHeader, AppMain
   }
 }
 
 </script>
 
 <template>
-  <prova></prova>
+  <AppHeader></AppHeader>
+
+  <AppMain></AppMain>
 </template>
 
 <style>
