@@ -39,7 +39,7 @@ export default {
                 </select>
             </div>
 
-            <div class="cards-container mt-3 p-5">
+            <div class="cards-container p-5">
 
                 <div class="found p-3"> Found 39 cards </div>
 
@@ -75,7 +75,5 @@ export default {
         color: $c-white;
     }
 }
-
-.ciao {color: red;}
 
 </style>

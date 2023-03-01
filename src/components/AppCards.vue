@@ -14,7 +14,7 @@ export default {
 
 <template>
 
-    <div class="col" v-for="card in store.cards">
+    <div class="col gy-2" v-for="card in store.cards">
         <div class="card" v-for="img in card.card_images">
           <img :src="img.image_url" class="card-img-top" alt="YGO">
           <div class="card-body text-center">
@@ -32,6 +32,7 @@ export default {
 
 .card {
     width: 100% !important;
+    height: 100%;
 }
 .card-body {
     background-color: $bg-orange;
