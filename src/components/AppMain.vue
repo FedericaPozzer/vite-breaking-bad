@@ -1,7 +1,7 @@
 <script>
 import AppCards from "./AppCards.vue"
 
-import axios from "axios"
+// import axios from "axios"
 
 
 export default {
@@ -9,18 +9,18 @@ export default {
 
     data() {
         return {
-            cards: [],
+            // cards: [],
         }
     },
 
-    created() {
-        axios
-            .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0")
-            .then((response) => {
-                console.log(response);
-                this.cards = response.data
-            })
-    }
+    // created() {
+    //     axios
+    //         .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0")
+    //         .then((response) => {
+    //             console.log(response);
+    //             this.cards = response.data.data
+    //         })
+    // }
 }
 
 </script>
@@ -43,12 +43,7 @@ export default {
 
                 <div class="found p-3"> Found 39 cards </div>
 
-                <div class="cards row row-cols-6">
-
-                    <div class="ciao" v-for="card in cards">
-                        <h2> {{ card.name }}</h2>
-                    
-                    </div>
+                <div class="cards row row-cols-5">
 
                     <AppCards></AppCards>
 
@@ -65,9 +60,6 @@ export default {
 
 .bg {
     background-color: $bg-orange;
-
-    // debug
-    height: $main-height;
 }
 
 .form {

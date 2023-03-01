@@ -1,16 +1,25 @@
 <script>
+import { store } from "../data/store"
+
+export default {
+    data() {
+        return {
+            store
+        }
+    }
+}
 
 </script>
 
 
 <template>
 
-    <div class="col">
-        <div class="card">
-          <img src="../../public/prova.png" class="card-img-top" alt="YGO">
+    <div class="col" v-for="card in store.cards">
+        <div class="card" v-for="img in card.card_images">
+          <img :src="img.image_url" class="card-img-top" alt="YGO">
           <div class="card-body text-center">
-            <h5 class="card-title">YUGI TITLE</h5>
-            <p class="card-text">Aliennn</p>
+            <h5 class="card-title"> {{ card.name }} </h5>
+            <p class="card-text"> {{ card.archetype }} </p>
           </div>
         </div>
     </div>
