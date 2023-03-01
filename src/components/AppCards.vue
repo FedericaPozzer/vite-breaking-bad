@@ -4,8 +4,9 @@
 
 
 <template>
+
     <div class="col">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <img src="../../public/prova.png" class="card-img-top" alt="YGO">
           <div class="card-body text-center">
             <h5 class="card-title">YUGI TITLE</h5>
@@ -13,88 +14,6 @@
           </div>
         </div>
     </div>
-
-    <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../../public/prova.png" class="card-img-top" alt="YGO">
-              <div class="card-body text-center">
-                <h5 class="card-title">YUGI TITLE</h5>
-                <p class="card-text">Aliennn</p>
-              </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../../public/prova.png" class="card-img-top" alt="YGO">
-              <div class="card-body text-center">
-                <h5 class="card-title">YUGI TITLE</h5>
-                <p class="card-text">Aliennn</p>
-              </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../../public/prova.png" class="card-img-top" alt="YGO">
-              <div class="card-body text-center">
-                <h5 class="card-title">YUGI TITLE</h5>
-                <p class="card-text">Aliennn</p>
-              </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../../public/prova.png" class="card-img-top" alt="YGO">
-              <div class="card-body text-center">
-                <h5 class="card-title">YUGI TITLE</h5>
-                <p class="card-text">Aliennn</p>
-              </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../../public/prova.png" class="card-img-top" alt="YGO">
-              <div class="card-body text-center">
-                <h5 class="card-title">YUGI TITLE</h5>
-                <p class="card-text">Aliennn</p>
-              </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../../public/prova.png" class="card-img-top" alt="YGO">
-              <div class="card-body text-center">
-                <h5 class="card-title">YUGI TITLE</h5>
-                <p class="card-text">Aliennn</p>
-              </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../../public/prova.png" class="card-img-top" alt="YGO">
-              <div class="card-body text-center">
-                <h5 class="card-title">YUGI TITLE</h5>
-                <p class="card-text">Aliennn</p>
-              </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="../../public/prova.png" class="card-img-top" alt="YGO">
-              <div class="card-body text-center">
-                <h5 class="card-title">YUGI TITLE</h5>
-                <p class="card-text">Aliennn</p>
-              </div>
-            </div>
-        </div>
-
-
 
 </template>
 
