@@ -5,21 +5,22 @@ import { store } from "../data/store"
 export default {
     data() {
         return {
-            store
+            store,
+            researchedType : "",
         }
     },
+
+    emits : ["invio-dati"]
 }
 
 </script>
 
-
+ <!-- onchange="$emit('invio-dati')" -->
 <template>
 
-    <div class="form">
-        <select class="form-select" aria-label="Default select example">
-            <option value="1" v-for="type in store.cardsTypes"> {{ type }} </option>
-            <!-- <option value="2">Gi</option> -->
-            <!-- <option value="3">Boh</option> -->
+    <div class="form" @submit.prevent="$emit('invio-dati')">
+        <select class="form-select" aria-label="Default select example" v-model="researchedType" onchange="if (this.researchedType) submit()">
+            <option v-for=" type in store.cardsTypes"> {{ type }} </option>
         </select>
     </div>
 
@@ -29,7 +30,7 @@ export default {
 @use "../scss/partials/variables" as *;
 
 .form {
-    max-width: 20%;
+    max-width: 30%;
     height: $header-height;
 }
 </style>

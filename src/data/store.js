@@ -2,7 +2,7 @@ import { reactive } from "vue"; // lo rendo usabile globalmente
 
 
 export const store = reactive({
-    cards: [],
+    cards : [],
 
     cardsTypes : [
         "Effect Monster",
@@ -34,5 +34,7 @@ export const store = reactive({
         "XYZ Pendulum Effect Monster",
         "Skill Card",
         "Token",
-    ]
+    ],
+
+    endpoint : "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0",
 });

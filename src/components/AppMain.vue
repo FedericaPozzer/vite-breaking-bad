@@ -13,6 +13,12 @@ export default {
             // store,
         }
     },
+
+    methods : {
+        funzioneSN() {
+            console.log("ricevuto")
+        }
+    }
 }
 
 </script>
@@ -24,7 +30,7 @@ export default {
         
         <div class="container py-3">
             
-            <SearchTypeSelect></SearchTypeSelect>
+            <SearchTypeSelect @invio-dati="funzioneSN"></SearchTypeSelect>
             
 
             <div class="cards-container p-5">

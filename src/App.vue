@@ -16,7 +16,7 @@ export default {
 
   created() {
     axios
-      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
+      .get(store.endpoint)
       .then((response) => {
         console.log(response);
         store.cards = response.data.data
@@ -28,8 +28,6 @@ export default {
   },
  
 }
-
-
 
 </script>
 

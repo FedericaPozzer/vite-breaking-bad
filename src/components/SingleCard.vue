@@ -1,7 +1,7 @@
 <script>
 export default {
     props : {
-        image: String,
+        image: Array,
         name: String,
         type: String,
     }
