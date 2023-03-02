@@ -1,4 +1,5 @@
 <script>
+import SingleCard from "./SingleCard.vue"
 import { store } from "../data/store"
 
 export default {
@@ -6,6 +7,10 @@ export default {
         return {
             store
         }
+    },
+
+    components: {
+        SingleCard,
     }
 }
 
@@ -14,15 +19,15 @@ export default {
 
 <template>
 
-    <div class="col gy-2" v-for="card in store.cards">
-        <div class="card" v-for="img in card.card_images">
-          <img :src="img.image_url" class="card-img-top" alt="YGO">
-          <div class="card-body text-center">
-            <h5 class="card-title"> {{ card.name }} </h5>
-            <p class="card-text"> {{ card.archetype }} </p>
-          </div>
-        </div>
-    </div>
+    <SingleCard
+
+        v-for="card in store.cards"
+        :key="card.name"
+        :image="card.card_images"
+        :name="card.name"
+        :type="card.type"
+    > 
+    </SingleCard>
 
 </template>
 
