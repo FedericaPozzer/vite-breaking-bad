@@ -1,43 +1,35 @@
 <script>
+import SearchTypeSelect from "./SearchTypeSelect.vue"
 import AppCards from "./AppCards.vue"
 
-// import axios from "axios"
+import { store } from "../data/store"
 
 
 export default {
-    components : { AppCards },
+    components : { SearchTypeSelect, AppCards },
 
     data() {
         return {
-            // cards: [],
+            store,
         }
     },
-
-    // created() {
-    //     axios
-    //         .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0")
-    //         .then((response) => {
-    //             console.log(response);
-    //             this.cards = response.data.data
-    //         })
-    // }
 }
 
 </script>
 
+ <!-- v-for="type in store.cardsTypes" -->
 
 <template>
     <div class="bg">
         
         <div class="container py-3">
-            <div class="form">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Alien</option>
-                    <option value="1">Yu</option>
-                    <option value="2">Gi</option>
-                    <option value="3">Boh</option>
-                </select>
-            </div>
+            
+            <SearchTypeSelect 
+                v-for="(type, i) in store.cardsTypes"
+                :key="type[i]"
+                :type="type"
+            ></SearchTypeSelect>
+            
 
             <div class="cards-container p-5">
 
@@ -62,10 +54,10 @@ export default {
     background-color: $bg-orange;
 }
 
-.form {
-    max-width: 20%;
-    height: $header-height;
-}
+// .form {
+//     max-width: 20%;
+//     height: $header-height;
+// }
 
 .cards-container {
     background-color: $bg-white;

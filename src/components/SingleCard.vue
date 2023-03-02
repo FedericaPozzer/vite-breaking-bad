@@ -1,6 +1,4 @@
 <script>
-import { stringifyExpression } from '@vue/compiler-core';
-
 export default {
     props : {
         image: String,
@@ -8,7 +6,6 @@ export default {
         type: String,
     }
 }
-
 
 </script>
 
