@@ -16,7 +16,7 @@ export default {
 
     methods : {
         funzioneSN() {
-            console.log("ricevuto")
+            console.log("ricevuto");
         }
     }
 }
