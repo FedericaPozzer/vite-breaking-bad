@@ -41,7 +41,7 @@ export default {
             console.log(researchedType); //siiiii *.*
             // console.log(`${store.endpoint}?type=${researchedType}`);
 
-            this.fetchCards(`${store.endpoint}?type=${researchedType}`);
+            this.fetchCards(`${store.endpoint}?type=${researchedType}`); // ah ok
         },
     },
 
