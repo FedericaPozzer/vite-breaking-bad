@@ -1,12 +1,13 @@
 <script>
-// import { store } from "../data/store"
+import { store } from "../data/store"
 
 
 export default {
-     props: {
-        type: String,
-    }
-   
+    data() {
+        return {
+            store
+        }
+    },
 }
 
 </script>
@@ -16,7 +17,7 @@ export default {
 
     <div class="form">
         <select class="form-select" aria-label="Default select example">
-            <option value="1"> {{ type }} </option>
+            <option value="1" v-for="type in store.cardsTypes"> {{ type }} </option>
             <!-- <option value="2">Gi</option> -->
             <!-- <option value="3">Boh</option> -->
         </select>

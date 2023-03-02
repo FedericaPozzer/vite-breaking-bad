@@ -2,7 +2,7 @@
 import SearchTypeSelect from "./SearchTypeSelect.vue"
 import AppCards from "./AppCards.vue"
 
-import { store } from "../data/store"
+// import { store } from "../data/store"
 
 
 export default {
@@ -10,7 +10,7 @@ export default {
 
     data() {
         return {
-            store,
+            // store,
         }
     },
 }
@@ -24,11 +24,7 @@ export default {
         
         <div class="container py-3">
             
-            <SearchTypeSelect 
-                v-for="(type, i) in store.cardsTypes"
-                :key="type[i]"
-                :type="type"
-            ></SearchTypeSelect>
+            <SearchTypeSelect></SearchTypeSelect>
             
 
             <div class="cards-container p-5">
