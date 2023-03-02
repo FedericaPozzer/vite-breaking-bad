@@ -15,8 +15,8 @@ export default {
     },
 
     methods : {
-        funzioneSN() {
-            console.log("ricevuto");
+        fetchSelectedType(researchedType) {
+            console.log(researchedType); //siiiii *.*
         }
     }
 }
@@ -30,7 +30,7 @@ export default {
         
         <div class="container py-3">
             
-            <SearchTypeSelect @invio-dati="funzioneSN"></SearchTypeSelect>
+            <SearchTypeSelect @invio-dati="fetchSelectedType"></SearchTypeSelect>
             
 
             <div class="cards-container p-5">

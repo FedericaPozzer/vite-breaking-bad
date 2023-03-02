@@ -21,12 +21,10 @@ export default {
 
 </script>
 
-<!-- $emit('invio-dati') -->
- <!-- onchange="$emit('invio-dati')" -->
 <template>
 
     <div class="form" @submit.prevent="">
-        <select class="form-select" aria-label="Default select example" v-model="researchedType" onchange="if (this.researchedType) selectedType();">
+        <select class="form-select" aria-label="Default select example" v-model="researchedType" @change="if (this.researchedType) selectedType();">
             <option v-for=" type in store.cardsTypes"> {{ type }} </option>
         </select>
     </div>
