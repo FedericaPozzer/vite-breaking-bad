@@ -2,7 +2,10 @@
 import SearchTypeSelect from "./SearchTypeSelect.vue"
 import AppCards from "./AppCards.vue"
 
-// import { store } from "../data/store"
+
+import axios from "axios"
+import { store } from "../data/store"
+import { createDOMCompilerError } from "@vue/compiler-dom"
 
 
 export default {
@@ -10,16 +13,44 @@ export default {
 
     data() {
         return {
-            // store,
+            store,
         }
     },
 
     methods : {
+
+        fetchCards(url) {
+            store.isPageLoading = true;
+            axios
+                .get(url)
+                .then((response) => {
+                    console.log(response);
+                    store.cards = response.data.data
+                })
+                // .catch((error) => {
+                //     store.cards = [];
+                //     console.error(error);
+                // })
+                // .finally(() => {
+                //     store.isPageLoading = false
+                // })
+
+        },
+
         fetchSelectedType(researchedType) {
             console.log(researchedType); //siiiii *.*
-        }
+            // console.log(`${store.endpoint}?type=${researchedType}`);
+
+            this.fetchCards(`${store.endpoint}?type=${researchedType}`);
+        },
+    },
+
+    created() {
+        this.fetchCards(store.endpoint);
     }
 }
+
+
 
 </script>
 
