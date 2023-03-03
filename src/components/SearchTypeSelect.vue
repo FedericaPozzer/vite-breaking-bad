@@ -25,7 +25,7 @@ export default {
 
     <div class="form" @submit.prevent="">
         <select class="form-select" aria-label="Default select example" v-model="researchedType" @change="if (this.researchedType) selectedType();">
-            <option v-for=" type in store.cardsTypes"> {{ type }} </option>
+            <option v-for="cardType in store.cardsTypes"> {{ cardType }} </option>
         </select>
     </div>
 
